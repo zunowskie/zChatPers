@@ -15,6 +15,7 @@ public final class ZChatPers extends JavaPlugin {
         instance = this;
         Bukkit.getPluginManager().registerEvents(new Heandler(), this);
         saveDefaultConfig();
+        System.out.println("zChatPers is enabled. Developer: bio.hushworld.fun");
         // Plugin startup logic
 
     }
