@@ -1,0 +1,9 @@
+message:
+  style: "&7[&eКП&7] &e%player% &7-> &f%msg%"
+  vk: true # дублировать ли сообщение из чата в вк?
+  vkmsg: "😎 %player% -> %msg%"
+vk:
+  message: "[VK] %target% -> %msg%"
+  peerid:
+admins:
+  552489709: 'capojkiii'

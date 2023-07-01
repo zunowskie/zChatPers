@@ -1,0 +1,4 @@
+name: zChatPers
+version: '1.0'
+main: ru.zunowskie.zchatpers.ZChatPers
+api-version: '1.16'

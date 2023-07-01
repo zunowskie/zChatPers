@@ -1,0 +1,4 @@
+name: zChatPers
+version: '${project.version}'
+main: ru.zunowskie.zchatpers.ZChatPers
+api-version: '1.16'
