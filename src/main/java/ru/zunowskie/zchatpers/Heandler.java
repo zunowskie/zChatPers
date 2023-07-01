@@ -55,6 +55,19 @@ public class Heandler implements Listener {
             int peerId = e.getPeer();
             int allowedPeerId = ZChatPers.getInstance().getConfig().getInt("vk.peerid");
 
+            if (allowedPeerId == 0) {
+                try {
+                    CLIENT.messages().send(ACTOR)
+                            .randomId(RANDOM.nextInt())
+                            .peerId(e.getPeer())
+                            .message("😒Поле vk.peerid не найдено или пустое. Поддержка @capojkiii")
+                            .execute();
+                } catch (ApiException | ClientException ex) {
+                    throw new RuntimeException(ex);
+                }
+                return;
+            }
+
             if (peerId != allowedPeerId) {
                 try {
                     CLIENT.messages().send(ACTOR)
@@ -68,7 +81,7 @@ public class Heandler implements Listener {
                 return;
             }
 
-            String textToSend = message.substring(10); 
+            String textToSend = message.substring(10);
             if (textToSend.isEmpty()) {
                 try {
                     CLIENT.messages().send(ACTOR)
@@ -119,6 +132,7 @@ public class Heandler implements Listener {
             }
         }
     }
+
 
 
 
