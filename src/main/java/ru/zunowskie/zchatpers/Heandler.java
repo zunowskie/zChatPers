@@ -68,9 +68,8 @@ public class Heandler implements Listener {
                 return;
             }
 
-            String textToSend = message.substring(10); // Получаем текст после "?отправить "
+            String textToSend = message.substring(10); 
             if (textToSend.isEmpty()) {
-                // Отправляем сообщение об ошибке, если текст отсутствует
                 try {
                     CLIENT.messages().send(ACTOR)
                             .randomId(RANDOM.nextInt())
